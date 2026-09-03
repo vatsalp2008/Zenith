@@ -1,8 +1,9 @@
 const express = require('express');
-const mongoose = require('mongoose');
 const cors = require('cors');
 const cookieParser = require('cookie-parser');
 require('dotenv').config();
+
+const connectDB = require('./config/db');
 
 const app = express();
 
@@ -47,13 +48,8 @@ app.use((err, req, res, next) => {
 const PORT = process.env.PORT || 5001;
 
 // Connect to MongoDB and start server
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/car-dealership')
-  .then(() => {
-    console.log('✅ MongoDB Connected');
-    app.listen(PORT, () => {
-      console.log(`✅ Server running on port ${PORT}`);
-    });
-  })
-  .catch(err => {
-    console.error('❌ MongoDB connection error:', err);
+connectDB().then(() => {
+  app.listen(PORT, () => {
+    console.log(`✅ Server running on port ${PORT}`);
   });
+});
