@@ -1,0 +1,35 @@
+# Dependencies
+node_modules/
+package-lock.json
+
+# Environment files
+.env
+.env.local
+*.env
+
+# Production
+/build
+/dist
+client/dist
+
+# Logs
+logs
+*.log
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+*.swp
+
+# Testing
+/coverage
+
+# Uploads
+/server/public/uploads/*
+!/server/public/uploads/.gitkeep
+
+# Redis dump
+dump.rdb
