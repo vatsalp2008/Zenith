@@ -1,0 +1,10 @@
+{
+  "recommendations": [
+    "dsznajder.es7-react-js-snippets",
+    "esbenp.prettier-vscode",
+    "dbaeumer.vscode-eslint",
+    "mongodb.mongodb-vscode",
+    "rangav.vscode-thunder-client",
+    "formulahendry.auto-rename-tag"
+  ]
+}
